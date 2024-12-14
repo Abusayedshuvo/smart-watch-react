@@ -5,3 +5,4 @@
 - React Js
 - Tailwind CSS
 - React Icons
+- Daisyui

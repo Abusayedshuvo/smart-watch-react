@@ -1,4 +1,8 @@
 import { FaRegStar, FaRegStarHalfStroke, FaStar } from "react-icons/fa6";
+import minus from "../../assets/minus.svg";
+import plus from "../../assets/plus.svg";
+import heart from "../../assets/heart.svg";
+import Cart from "../Cart/Cart";
 
 const Details = () => {
   return (
@@ -42,6 +46,7 @@ const Details = () => {
           <button className="three w-4 h-4 rounded-full bg-[#3B4747]"></button>
         </div>
       </div>
+      {/* size buttons */}
       <div className="pt-[20px]">
         <p className="text-dark font-bold text-lg">Wrist Size</p>
         <div className="mt-[10px] space-x-3">
@@ -62,6 +67,43 @@ const Details = () => {
             <span className="text-grey text-[13px] font-bold pl-3">$99</span>
           </button>
         </div>
+      </div>
+      {/* Add to cart button area */}
+      <div className="pt-[20px]  flex">
+        <div className="flex text-center">
+          <button className="border border-[#DBDFEA]  w-[35px] h-[36px] rounded-[3px] border-r-0 rounded-r-none">
+            <img className="mx-auto" src={minus} alt="" />
+          </button>
+          <span className="border border-[#DBDFEA] w-[60px] h-[36px] inline-block leading-9">
+            0
+          </span>
+          <button className="border border-[#DBDFEA] w-[35px] h-[36px] rounded-[3px] border-l-0 rounded-l-none">
+            <img className="mx-auto" src={plus} alt="" />
+          </button>
+        </div>
+
+        <div className="ml-3 flex items-center">
+          <button className="bg-blue py-2 px-[18px] rounded-[3px] text-white font-bold text-[13px]">
+            Add to Cart
+          </button>
+          <button className="ml-3">
+            <img src={heart} alt="" />
+          </button>
+        </div>
+      </div>
+
+      {/* checkout button */}
+      <div className="absolute bottom-[20px] left-0 right-0 mx-auto text-center">
+        <button
+          className=" bg-[#FFBB5A] shadow-md rounded-3xl py-2 px-6 font-bold text-sm h-[42px] "
+          onClick={() => document.getElementById("my_modal_2").showModal()}
+        >
+          Checkout
+          <span className="bg-white w-[20px] h-[20px] rounded inline-block ml-[10px] leading-[22px]">
+            0
+          </span>
+        </button>
+        <Cart></Cart>
       </div>
     </>
   );
