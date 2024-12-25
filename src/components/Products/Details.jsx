@@ -2,9 +2,8 @@ import { FaRegStar, FaRegStarHalfStroke, FaStar } from "react-icons/fa6";
 import minus from "../../assets/minus.svg";
 import plus from "../../assets/plus.svg";
 import heart from "../../assets/heart.svg";
-import Cart from "../Cart/Cart";
 
-const Details = () => {
+const Details = ({ changeImg }) => {
   return (
     <>
       <h1 className="text-dark text-[40px] font-bold py-3">
@@ -37,10 +36,14 @@ const Details = () => {
           <p className="text-dark font-bold">Forerunner 290XT</p>
         </div>
       </div>
+      {/* Band Color */}
       <div className="pt-[20px]">
         <p className="text-dark font-bold text-lg">Band Color</p>
         <div className="mt-[10px] space-x-5">
-          <button className="one w-4 h-4 rounded-full bg-[#816BFF]"></button>
+          <button
+            onClick={changeImg}
+            className="one w-4 h-4 rounded-full bg-[#816BFF]"
+          ></button>
           <button className="two w-4 h-4 rounded-full bg-[#1FCEC9]"></button>
           <button className="three w-4 h-4 rounded-full bg-[#4B97D3]"></button>
           <button className="three w-4 h-4 rounded-full bg-[#3B4747]"></button>
@@ -90,20 +93,6 @@ const Details = () => {
             <img src={heart} alt="" />
           </button>
         </div>
-      </div>
-
-      {/* checkout button */}
-      <div className="absolute bottom-[20px] left-0 right-0 mx-auto text-center">
-        <button
-          className=" bg-[#FFBB5A] shadow-md rounded-3xl py-2 px-6 font-bold text-sm h-[42px] "
-          onClick={() => document.getElementById("my_modal_2").showModal()}
-        >
-          Checkout
-          <span className="bg-white w-[20px] h-[20px] rounded inline-block ml-[10px] leading-[22px]">
-            0
-          </span>
-        </button>
-        <Cart></Cart>
       </div>
     </>
   );

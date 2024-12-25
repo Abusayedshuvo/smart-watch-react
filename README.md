@@ -1,8 +1,10 @@
 # Job Task Smart Watch
 
-## Tool or Technology
+## Tools or Technology
 
 - React Js
 - Tailwind CSS
 - React Icons
 - Daisyui
+
+Live demo : [https://graceful-toffee-3117a5.netlify.app/]
